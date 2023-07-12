@@ -1,0 +1,54 @@
+defaults:
+  - base
+
+env:
+  MDP: "gym_marsrover:marsrover-v0"
+  failureprob: 0.2
+  state_num: 48
+  state_type: "continuous"
+  is_atari: False
+  penalty: -0.1
+
+alg:
+  algorithm: "DQN"
+  guidance: True
+  model_type: "dataset"
+  dir: "./outputs"
+
+hyper:
+  alpha: 0.1
+  gamma: 0.9
+  epsilon: 0.2
+  epsilon_decay: 0.9995
+  alpha_bayes: 0.5
+  beta_bayes: 0.5
+  episode_num: 2000
+  sim_episode_num: 10
+  timestep: 50000
+  iteration_num: 3000
+  sample_num: 100
+  rounding_digits: 2
+  safety_check_num: 200
+  n_envs: 1
+  precision: 0.65
+  confidence: 0.95
+  u: 0.01
+  bayes_factor: 1
+
+  learning_rate: 5e-4
+  total_timesteps: 500000
+  sim_timesteps: 10000
+  n_steps: 1000
+  target_update_interval: 1000
+  clip_range_vf: 0.1
+  max_grad_norm: 0.1
+  learning_starts: 5000
+  exploration_initial_eps: 1
+  exploration_final_eps: 0.05
+  exploration_fraction: 0.2
+  gradient_steps: 128
+  train_freq: 100
+  offline_rolling_window: 200
+  batch_size: 128
+
+

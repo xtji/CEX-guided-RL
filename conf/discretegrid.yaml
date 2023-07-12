@@ -1,0 +1,39 @@
+defaults:
+  - base
+
+env:
+  MDP: "gym_gridworld:gridworld-v0"
+  failureprob: 0.2
+  state_num: 30
+  state_type: "discrete"
+  dim_num: 2
+  is_atari: False
+  mode: "discrete"
+  pf: 0
+  penalty: -1
+
+alg:
+  algorithm: "QLearning"
+  guidance: Ture
+  model_type: "dataset"
+  dir: "./outputs"
+
+hyper:
+  alpha: 0.9
+  gamma: 0.99
+  epsilon: 0.3
+  epsilon_decay: 0.9995
+  alpha_bayes: 0.5
+  beta_bayes: 0.5
+  episode_num: 2000
+  sim_episode_num: 100
+  timestep: 50000
+  iteration_num: 5000
+  sample_num: 100
+  rounding_digits: 2
+  safety_check_num: 100
+  n_envs: 1
+  precision: 0.95
+  confidence: 0.99
+  u: 0.01
+  bayes_factor: 1

@@ -1,0 +1,40 @@
+defaults:
+  - base
+
+env:
+  MDP: "FrozenLake8x8-v1"
+  failureprob: 0.3
+  state_num: 20
+  is_atari: False
+  state_type: "discrete"
+  dim_num: 2
+  is_slippery: True
+  pf: 0
+  penalty: -1
+
+alg:
+  algorithm: "QLearning"
+  guidance: True
+  model_type: "dataset"
+  dir: "./outputs"
+
+hyper:
+  alpha: 0.1
+  gamma: 0.9
+  epsilon: 0.2
+  epsilon_decay: 0.9995
+  alpha_bayes: 0.5
+  beta_bayes: 0.5
+  episode_num: 10000
+  sim_episode_num: 100
+  timestep: 50000
+  iteration_num: 199
+  sample_num: 100
+  rounding_digits: 2
+  safety_check_num: 1000
+  n_envs: 1
+  precision: 0.9
+  confidence: 0.95
+  u: 0.01
+  bayes_factor: 1
+

@@ -1,0 +1,23 @@
+env:
+  dim_num: 2
+  is_atari: False
+  pf: 0
+
+alg:
+  algorithm: "QLearning"
+  guidance: True
+  dir: "./outputs"
+
+hyper:
+  alpha: 0.9
+  gamma: 0.9
+  epsilon: 0.3
+  epsilon_decay: 0.999
+  alpha_bayes: 0.5
+  beta_bayes: 0.5
+  episode_num: 2000
+  timestep: 50000
+  iteration_num: 5000
+  sample_num: 100
+  rounding_digits: 2
+  safety_check_num: 50
